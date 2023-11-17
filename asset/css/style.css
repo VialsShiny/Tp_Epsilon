@@ -24,9 +24,12 @@ p {
 header {
     background: url(/asset/images/banner.jpg) no-repeat;
     background-size: cover;
-    color: white;
+    color: white;   
     height: 200px;
     background-position: center;
+    position: fixed;
+    width: 100%;
+    margin: 0;
 }
 
 .trait-blanc {
@@ -53,6 +56,11 @@ header span {
 
 /* <Main */
 
+main {
+    position: absolute;
+    z-index: 1;
+}
+
 .apros {
     margin: 40px;
     background-color: white;
@@ -63,10 +71,6 @@ header span {
     color: #666666;
 }
 
-.apros h2 {
-    letter-spacing: 1px;
-}
-
 .fa-gem {
     font-size: 35px;
     align-items: center;
@@ -75,10 +79,13 @@ header span {
     padding: 25px;
 }
 
-.apros h2 {
+.apros h2,
+h3,
+h4 {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 25px;
     padding-bottom: 5px;
+    letter-spacing: 1px;
 }
 
 #info-text {
@@ -121,16 +128,23 @@ header span {
     transition: 0.5s;
 }
 
-main article img {
-    filter: brightness(80%);
-    z-index: 2;
+.img {
     width: 100%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
 }
 
-main article img:hover {
-    filter: brightness(50%);
+.img img {
+    filter: brightness(80%);
     width: 100%;
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.img img:hover {
+    filter: brightness(50%);
     transition: 0.5s;
+    scale: 1.3;
 }
 
 .title p {
@@ -148,6 +162,7 @@ main article img:hover {
 
 .info-art {
     background-color: white;
+    border-radius: 0 0 10px 10px;
 }
 
 .info-art p {
@@ -190,47 +205,18 @@ main article img:hover {
         width: 45%;    
         transition: 0.5s;
     }
-}
 
-@media screen and (max-width: 736px) {
     .info-art p {
         font-size: 7px;
         transition: 0.5s;
     }
-}
 
-@media screen and (max-width: 544px) {
-    .info-art p {
-        font-size: 3px;
-        transition: 0.5s;
-    }
-}
-
-@media screen and (max-width: 544px) {
-    .title p {
-        font-size: 10px;
-        width: 40%;    
-        transition: 0.5s;
-    }
-}
-
-@media screen and (max-width: 736px) {
     .button-page {
         padding: 5px 7%;
         font-size: 10px;
         transition: 0.5s;
     }
-}
 
-@media screen and (max-width: 544px) {
-    .button-page {
-        padding: 5px 7%;
-        font-size: 5px;
-        transition: 0.5s;
-    }
-}
-
-@media screen and (max-width: 736px) {
     #info-text {
         font-size: 9px;
         padding: 0 35% 10px;
@@ -239,9 +225,26 @@ main article img:hover {
 }
 
 @media screen and (max-width: 544px) {
+    .info-art p {
+        font-size: 5px;
+        transition: 0.5s;
+    }
+
     #info-text {
         font-size: 5px;
         padding: 0 35% 10px;
+        transition: 0.5s;
+    }
+
+    .title p {
+        font-size: 10px;
+        width: 40%;    
+        transition: 0.5s;
+    }
+
+    .button-page {
+        padding: 5px 7%;
+        font-size: 5px;
         transition: 0.5s;
     }
 }
