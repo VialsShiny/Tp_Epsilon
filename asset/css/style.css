@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Montserrat:wght@200&display=swap');
 
 body {
+    width: 100%;
     margin: 0;
+    padding: 0;
     background-color: rgb(233, 233, 233);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -61,8 +63,9 @@ header span {
 /* <Main */
 
 main {
+    width: 100%;
     background-color: rgb(233, 233, 233);
-    margin-top: 400px;
+    margin-top: 350px;
     position: absolute;
     z-index: 1;
 }
@@ -211,7 +214,7 @@ h4 {
 
 .find-us {
     background-color: white;
-    margin: 10px 40px 500px;
+    margin: 10px 40px 50px;
 }
 
 .info-f-us {
@@ -261,6 +264,7 @@ h4 {
 
 .insert-user ul {
     list-style: none;
+    padding: 0;
 }
 
 .insert-user li {
@@ -273,6 +277,14 @@ h4 {
     width: 350px;
     padding: 10px;
     background-color: #f7f7f7;
+    transition: 0.2s;
+}
+
+.insert-user input:focus {
+    outline: 2.5px solid #EF6480;
+    border: none;
+    color: #EF6480;
+    transition: 0.2s;
 }
 
 #select {
@@ -284,7 +296,13 @@ h4 {
 }
 
 
-/* >Main */
+/* >Main */ 
+
+/* <Footer */
+
+
+
+/* >Footer */
 
 
 /* Clear */
